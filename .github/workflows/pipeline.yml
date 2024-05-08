@@ -59,6 +59,6 @@ jobs:
         if: ${{ github.event_name == 'push' }}
         uses: bervProject/railway-deploy@main
         with:
-          railway_token: d0d15019-35c9-436c-be62-3ccab7c06ddf
+          railway_token: 5b1f0b1c-f380-41d3-944a-4c7992f02f74
           service: "Chat_Socket_io"
           detach: true
