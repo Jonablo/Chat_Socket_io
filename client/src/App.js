@@ -1,7 +1,7 @@
 import './App.css';
 import io from 'socket.io-client'
 import { useState, useEffect } from 'react'
-import e from 'cors';
+
 
 //const socket = io('http://localhost:4000')
 const socket = io()
@@ -46,7 +46,7 @@ function App() {
 
         <ul className='h-80 overflow-y-auto'>
           {messages.map((message, index) => (
-            <li key={index} className={`my-2 p-2 table text-sm rounded-md ${message.from == "Me" ? "bg-green-900 ml-auto" : "bg-zinc-800"}`}>
+            <li key={index} className={`my-2 p-2 table text-sm rounded-md ${message.from === "Me" ? "bg-green-900 ml-auto" : "bg-zinc-800"}`}>
               <p>{message.from} : {message.body}</p>
             </li>
           ))
